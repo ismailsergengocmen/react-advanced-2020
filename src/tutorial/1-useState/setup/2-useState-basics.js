@@ -1,4 +1,8 @@
 import React, { useState } from 'react'
+// use
+// component name must be uppercase
+// must be in the function/component body
+// cannot call conditionally
 
 const UseStateBasics = () => {
   /* Uncomment to see useState mechanism. Usestate holds element that will be changed 
@@ -9,11 +13,14 @@ const UseStateBasics = () => {
   const handler = useState(1)[1]
   console.log(value,handler);  */
 
-
-  const [text, setText] = useState('random title')
+  const [text, setText] = useState('random title') //Array destructuring
+  // Does the same job with the upper commented lines
   
   const handleClick = () => {
-    setText(109); //Changes text variable's value to given string 
+    if(text === 'random title')
+      setText(109); //Changes text variable's value to given string
+    else
+      setText('random title') 
   };
 
   return (
