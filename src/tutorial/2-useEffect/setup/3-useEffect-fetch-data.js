@@ -10,13 +10,13 @@ const UseEffectFetchData = () => {
   const getUsers = async () => {
     const response = await fetch(url);
     const users = await response.json();
-    setUsers(users);
+    setUsers(users); 
   }
   
   //useEffect itself can not be async function. But it can call async function
   useEffect(() => {
       getUsers();
-  },[]);
+  },[]); 
 
   return (
     <>
